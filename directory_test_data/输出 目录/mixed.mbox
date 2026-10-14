@@ -1,0 +1,72 @@
+From multi@example.com Tue Oct 13 14:00:00 2026
+From: Multipart Sender <multi@example.com>
+To: Bob Smith <bob@example.com>
+Subject: Multipart message with attachment and unicode
+Date: Mon, 13 Oct 2026 14:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY123"
+
+--BOUNDARY123
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+This is the plain text part.
+Multipart MIME with global chars: αβγδε, Привет, 你好.
+
+--BOUNDARY123
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<h1>HTML Part</h1>
+<p>Unicode in HTML: &alpha;&beta;&gamma; — こんにちは — مرحبا</p>
+</body></html>
+
+--BOUNDARY123
+Content-Type: application/octet-stream; name="notes.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="notes.txt"
+
+VGhpcyBpcyBhbiBhdHRhY2hlZCB0ZXh0IGZpbGUgd2l0aCBVVEY4OiDh/KIgZGVtby4=
+
+--BOUNDARY123--
+
+From alice@example.com Tue Oct 13 10:00:00 2026
+From: Alice Johnson <alice@example.com>
+To: Bob Smith <bob@example.com>
+Subject: Hello from UTF-8 world
+Date: Mon, 13 Oct 2026 10:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Hello Bob,
+
+This is a simple UTF-8 encoded email in plain English.
+It serves as a baseline example for the EML to MBOX converter.
+
+Best regards,
+Alice
+
+From liming@example.cn Tue Oct 13 11:00:00 2026
+From: 李明 <liming@example.cn>
+To: Alice Johnson <alice@example.com>
+Subject: =?UTF-8?B?6K6k6K+v5L2g5LiL5L2T4oCU5q2j5paH5pys5qC8?=
+Date: Mon, 13 Oct 2026 11:00:00 +0800
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+你好 Alice，
+
+这是一封包含中文内容的测试邮件。
+我们正在测试 EML 到 MBOX 的转换工具是否能正确处理多字节字符。
+
+日本語のテストも含まれています。
+한국어 테스트도 함께 있습니다.
+
+以下是一些特殊符号：★ ♥ → ∞ ≠
+
+此致
+李明
+

@@ -1,0 +1,15 @@
+From: Alice Johnson <alice@example.com>
+To: Bob Smith <bob@example.com>
+Subject: Hello from UTF-8 world
+Date: Mon, 13 Oct 2026 10:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Hello Bob,
+
+This is a simple UTF-8 encoded email in plain English.
+It serves as a baseline example for the EML to MBOX converter.
+
+Best regards,
+Alice

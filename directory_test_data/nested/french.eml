@@ -1,0 +1,17 @@
+From: Pierre Dupont <pierre@example.fr>
+To: Alice Johnson <alice@example.com>
+Subject: =?ISO-8859-1?Q?Bonjour_et_bienvenue_=E0_Paris?=
+Date: Mon, 13 Oct 2026 12:00:00 +0100
+MIME-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour Alice,
+
+Voici un message en fran=E7ais avec des accents.
+=C9=E9, =E8=EA=EB, =E0=E2, =F9=FB, =E7, etc.
+
+Apr=E8s la conversion, ces caract=E8res doivent =EAtre pr=E9serv=E9s.
+
+Cordialement,
+Pierre

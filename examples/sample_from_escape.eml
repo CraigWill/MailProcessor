@@ -1,0 +1,19 @@
+From: "Test Escaping" <escaper@example.com>
+To: Bob Smith <bob@example.com>
+Subject: Test From-line escaping in body
+Date: Mon, 13 Oct 2026 13:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+This message contains lines that start with "From " in the body.
+They must be escaped with a leading ">" in the MBOX format.
+
+From this point on, note the following:
+From someone@example.com Mon Oct 13 2026
+From another@example.com
+
+This line starts with From but not with "From " exactly.
+>From this line was already escaped.
+
+End of message.

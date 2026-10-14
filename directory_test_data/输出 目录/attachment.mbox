@@ -1,0 +1,33 @@
+From multi@example.com Tue Oct 13 14:00:00 2026
+From: Multipart Sender <multi@example.com>
+To: Bob Smith <bob@example.com>
+Subject: Multipart message with attachment and unicode
+Date: Mon, 13 Oct 2026 14:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY123"
+
+--BOUNDARY123
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+This is the plain text part.
+Multipart MIME with global chars: αβγδε, Привет, 你好.
+
+--BOUNDARY123
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<h1>HTML Part</h1>
+<p>Unicode in HTML: &alpha;&beta;&gamma; — こんにちは — مرحبا</p>
+</body></html>
+
+--BOUNDARY123
+Content-Type: application/octet-stream; name="notes.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="notes.txt"
+
+VGhpcyBpcyBhbiBhdHRhY2hlZCB0ZXh0IGZpbGUgd2l0aCBVVEY4OiDh/KIgZGVtby4=
+
+--BOUNDARY123--
+
